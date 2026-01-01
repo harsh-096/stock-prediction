@@ -35,7 +35,7 @@ class DataFetcher:
                 end=end_date,
                 interval=self.timeframe,
                 progress=False,
-                auto_adjust=True,  # ✅ FIX: Added this
+                auto_adjust=True,  
                 prepost=False,
                 threads=True
             )
@@ -43,7 +43,7 @@ class DataFetcher:
             if df.empty:
                 raise ValueError(f"No data fetched for {self.symbol}")
             
-            # ✅ FIX: Handle MultiIndex columns properly
+            # Handle MultiIndex columns properly
             if isinstance(df.columns, pd.MultiIndex):
                 df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
             
@@ -80,3 +80,4 @@ if __name__ == "__main__":
         fetcher.save_data(df, "data/RELIANCE_15m.csv")
         print("\nFirst 3 rows:")
         print(df.head(3))
+
