@@ -57,6 +57,14 @@ This is an **active WIP project** – still being improved with more AI, automat
 
         cd prediction
         python -m src.main
+
+8. Delete Previous model to train with NEW Data :
+
+       del models\*.pkl
+       del data\*.pkl
+       del data\*.csv
+
+   Run above bash and run the main.py again.
    
    The bot will:
 
