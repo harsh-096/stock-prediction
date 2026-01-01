@@ -9,7 +9,7 @@ This is an **active WIP project** – still being improved with more AI, automat
         cd <your-repo-name>
 
 2. Project Structure
-After download, your folder should look like this:
+        After download, your folder should look like this:
 
         prediction/
         ├── config.py
@@ -26,57 +26,51 @@ After download, your folder should look like this:
           └── alerts.py
 
    
-3. Virtualenv & Requirements
-From inside the prediction/ folder:
+4. Virtualenv & Requirements
+        From inside the prediction/ folder:
 
         python -m venv .venv
 
-Windows:
+   Windows:
 
         .venv\Scripts\activate
-Linux/macOS:
+   Linux/macOS:
 
-    source .venv/bin/activate
-
-    pip install -r requirements.txt
+            source .venv/bin/activate
+        
+            pip install -r requirements.txt
     
 4. config.py Set Up:
 
-  Feel Free to adjust parameters, profit, loss etc. ; Also can change the which stock to trade too.
+      Feel Free to adjust parameters, profit, loss etc. ; Also can change the which stock to trade too.
 
-  And also if you want to get a notification on TELEGRAM you can set up your Bot and Chat ID to get the notifications.
+      And also if you want to get a notification on TELEGRAM you can set up your Bot and Chat ID to get the notifications.
    
 5. Train Models
 
         cd prediction
         python -m src.model_trainer
    
-This will download intraday data, engineer features and train XGBoost models for your configured stocks.
+      This will download intraday data, engineer features and train XGBoost models for your configured stocks.
 
 7. Run the Bot
 
         cd prediction
         python -m src.main
    
-The bot will:
+   The bot will:
 
-Respect NSE market hours
+      Respect NSE market hours
+      Fetch latest OHLCV data
+      Generate BUY signals using the trained models
+      Send Telegram alerts (if configured)
+      Log all trades to data/logs/ for later analysis
 
-Fetch latest OHLCV data
+   Roadmap:
 
-Generate BUY signals using the trained models
-
-Send Telegram alerts (if configured)
-
-Log all trades to data/logs/ for later analysis
-
-Roadmap
-
-Better AI models and tuning for more stable performance
-
-More automation around paper/live mode workflows
-
-Planned: Add news scraping and sentiment signals to combine price action with news/keywords for smarter entries and exits
+      Better AI models and tuning for more stable performance
+      More automation around paper/live mode workflows
+      Planned: Add news scraping and sentiment signals to combine price action with news/keywords for smarter entries and exits
 
 Disclaimer
 This project is for educational and experimental use only.
