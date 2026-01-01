@@ -113,7 +113,7 @@ def log_trade(filepath, trade_data):
 
 if __name__ == "__main__":
     # Test
-    alerts = TelegramAlerts("8484859931:AAHsz0K2qiBR_QpWbGG1SpoyxvZISAsyQw0", "1657858894")
+    alerts = TelegramAlerts("bot_token", "chat_id")
     
     # Test buy signal
     alerts.send_buy_signal(
@@ -125,3 +125,4 @@ if __name__ == "__main__":
     
     # Test error
     alerts.send_error_alert("Connection to market data failed!")
+
