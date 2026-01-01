@@ -120,11 +120,11 @@ class TechnicalIndicators:
         return df
 
 if __name__ == "__main__":
-    # Test - FIXED MultiIndex handling
+    # Test - MultiIndex handling
     print("🧪 Testing features_intraday.py...")
     df = yf.download("RELIANCE.NS", period="5d", interval="15m", progress=False)
     
-    # ✅ FIX: Handle MultiIndex columns properly
+    # Handle MultiIndex columns properly
     if isinstance(df.columns, pd.MultiIndex):
         df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
     else:
@@ -145,3 +145,4 @@ if __name__ == "__main__":
     print(f"New feature columns: {len([col for col in df_features.columns if col not in ['open','high','low','close','volume']])}")
     print("\n📈 Last 3 rows:")
     print(df_features[['open','high','low','close','rsi_14','macd','atr_14','bb_width','stoch_k']].tail(3))
+
