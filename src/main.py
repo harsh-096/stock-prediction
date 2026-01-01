@@ -1,4 +1,4 @@
-# src/main.py - MULTI-STOCK TRADING BOT WITH CENTRALIZED CONFIG
+# src/main.py
 
 import schedule
 import time
@@ -353,3 +353,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
