@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+yfinance
+matplotlib
+joblib
+stock-indicators
+
+
+del models\*.pkl
+del data\*.pkl
+del data\*.csv
