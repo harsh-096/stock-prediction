@@ -1,4 +1,4 @@
-NSE Intraday Trading Bot
+# NSE Intraday Trading Bot
 
 Simple intraday trading bot for NSE stocks using Python, XGBoost and Telegram alerts.  
 This is an **active WIP project** – still being improved with more AI, automation, and future plans for news scraping–based signals to make it more robust.
