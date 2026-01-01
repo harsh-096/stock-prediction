@@ -80,10 +80,7 @@ This is an **active WIP project** – still being improved with more AI, automat
       More automation around paper/live mode workflows
       Planned: Add news scraping and sentiment signals to combine price action with news/keywords for smarter entries and exits
 
-Disclaimer
+# Disclaimer
 This project is for educational and experimental use only.
 Nothing here is financial advice, and profitability is not guaranteed.
 Always start with paper trading and use your own risk management.
-
-text
-undefined
